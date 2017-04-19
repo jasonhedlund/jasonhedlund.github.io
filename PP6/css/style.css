@@ -1,0 +1,75 @@
+#main-navbar {
+	width: 100%;
+	position: relative;
+	background-color: blue;
+	overflow: hidden;
+}
+
+#navbar-container
+{
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+#navbar-container ul
+{
+	float: left;
+	position: relative;
+	right: 50%;
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+#navbar-container ul li
+{
+	float: left;
+	display: block;
+	padding: 10px 20px;
+}
+
+#navbar-container a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+#onpage a
+{
+	text-decoration: underline overline;
+}
+
+#sidebar
+{
+	position: fixed;
+	right: 0%;
+	background-color: red;
+	height: 100%;
+	width: 20%;
+}
+
+#sidebar ul
+{
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+}
+
+#sidebar li
+{
+	display: block;
+	padding: 15px 0;
+}
+
+#sidebar a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+a:active
+{
+	background-color: #000;
+}
