@@ -35,6 +35,9 @@
 						<li>Overall GPA 3.4/ Major GPA 3.6</li>
 						<li>BA Expected 2017</li>
 					</ul><br>
+					
+					<div id ="map"></div><br>
+					
 				</header>
 			</article>
 
@@ -51,9 +54,8 @@
 					</ul><br>
 				</header>
 			</article>
-
-			<p>____________________________________________________________________________________________
-			</p><br>
+			
+            <hr><br>
 
 			<article>
 				<header>
@@ -65,7 +67,7 @@
 
 					<p>Diagnoised and repaired PCBs that aided in the functionality of Cash Registers and Point of Sale equipment</p>
 					<p>February 2014 - August 2014</p><br>
-
+					
 					<figure>
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/1AtoUy0QHJo" allowfullscreen></iframe>
 						<figcaption>Illinois Wholesale Promotional Video</figcaption>
@@ -87,6 +89,20 @@
 			</footer>
 			
 			</div>
+			
+			<script>
+					
+					function initMap() {
+					  var map;
+					  map = new google.maps.Map(document.getElementById('map'), {
+					  center: {lat: 41.834937, lng: -87.627145},
+					  zoom: 17
+					});
+					}
+					</script>
+					
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfpJowdN9AXkinSJ-GQ4L4wPDN6DZWe-g&callback=initMap" async defer>
+					</script>
 			
 			<script src="javascript.js"></script>
 			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
