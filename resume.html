@@ -93,12 +93,29 @@
 			<script>
 					
 					function initMap() {
-					  var map;
-					  map = new google.maps.Map(document.getElementById('map'), {
-					  center: {lat: 41.834937, lng: -87.627145},
-					  zoom: 17
+					  var work = {lat: 41.834937, lng: -87.627145};
+					  var map = new google.maps.Map(document.getElementById('map'), {
+					  zoom: 17,
+					  center: work
+					  
 					});
-					}
+					var infoWindow = new google.maps.InfoWindow;
+					infoWindow.setContent('<b>Illinois Institute of Technology</b>');
+					
+					var marker= new google.maps.Marker({map: map, position: work});
+					
+					marker.addListener('click',function(){
+					  infoWindow.open(map, marker);
+					  map.setZoom(15);
+					  map.setCenter(marker.getPosition());
+					});
+					
+					map.addListener('center_changed', function() {
+					  window.setTimout(function() {
+					  map.panTo(marker.getPosition());
+					  }, 3000);
+					});
+				  }
 					</script>
 					
 					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfpJowdN9AXkinSJ-GQ4L4wPDN6DZWe-g&callback=initMap" async defer>
